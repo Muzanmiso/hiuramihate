@@ -1,0 +1,7 @@
+body {
+    padding-top: 0; /* Initially no padding */
+}
+
+.fixed-top {
+    transition: padding-top 0.3s ease-in-out;
+}
