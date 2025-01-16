@@ -9,9 +9,16 @@
 </head>
 <body>
     <!-- Banner -->
-    <section class="banner bg-light text-center " id="banner">
+    <section class="banner bg-light text-center py-5" id="banner">
         <div class="container">
-
+            <h1 class="display-4">Chào mừng đến với Câu lạc bộ trường học của chúng tôi</h1>
+            <p class="lead">Khám phá nhiều câu lạc bộ khác nhau và tìm câu lạc bộ phù hợp với sở thích của bạn!</p>
+            <div class="banner-images">
+                <img src="images/badmintonlogo.jpg" class="img-fluid rounded" alt="Image 1">
+                <img src="images/kstarlogo.jpg" class="img-fluid rounded" alt="Image 2">
+                <img src="images/HOPlogo.jpg" class="img-fluid rounded" alt="Image 3">
+                <img src="images/pfclogo.jpg" class="img-fluid rounded" alt="Image 4">
+            </div>
         </div>
     </section>
     
@@ -128,5 +135,17 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var banner = document.getElementById('banner');
+            var navbar = document.getElementById('navbar');
+            var bannerHeight = banner.offsetHeight;
+            if (window.scrollY >= bannerHeight) {
+                navbar.classList.add('fixed-top');
+            } else {
+                navbar.classList.remove('fixed-top');
+            }
+        });
+    </script>
 </body>
 </html>
