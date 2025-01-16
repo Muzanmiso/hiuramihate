@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Clubs</title>
+    <title>Danh Sách CLB - School Clubs</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Banner -->
-    <section class="banner bg-light text-center py-5 mt-5" >
+    <section class="banner bg-light text-center " id="banner">
         <div class="container">
-            <h1 class="display-4">Chào mừng đến với Câu lạc bộ trường học của chúng tôi</h1>
-            <p class="lead">Khám phá nhiều câu lạc bộ khác nhau và tìm câu lạc bộ phù hợp với sở thích của bạn!</p>
-            <img src="images/school-clubs.jpg" class="img-fluid rounded" alt="School Clubs">
+
         </div>
     </section>
     
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">câu lạc bộ trường THPT Phạm Hồng Thái</a>
+            <a class="navbar-brand" href="index.html">câu lạc bộ trường THPT Phạm Hồng Thái</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,20 +28,23 @@
                         <a class="nav-link" href="index.html">Trang Chủ <span class="sr-only">(hiện tại)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gioi-thieu.html">giới thiệu</a>
+                        <a class="nav-link" href="#">giới thiệu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hoat-dong-noi-bat.html">hoạt động nổi bật</a>
+                        <a class="nav-link" href="danhsachclb.html">danh sách clb</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tham-gia-clb.html">tham gia clb</a>
+                        <a class="nav-link" href="#">ban sự kiện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">liên hệ</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Survey Section -->
+    <!-- Survey Section
     <section class="survey py-5 bg-primary text-white text-center">
         <div class="container">
             <h2 class="mb-4">Câu lạc bộ nào phù hợp với bạn?</h2>
@@ -76,7 +77,7 @@
                 <a id="clubLink" href="#" class="btn btn-light btn-lg mt-3">Tới trang câu lạc bộ</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Recent News Section -->
     <section class="recent-news py-5">
@@ -85,10 +86,10 @@
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="card">
-                        <img src="images/giai-bong-da-mini.jpg" class="card-img-top" alt="giải bóng đá mini nam">
+                        <!-- <img src="images/science-fair.jpg" class="card-img-top" alt="Science Fair"> -->
                         <div class="card-body">
-                            <h5 class="card-title">giải bóng đá mini nam học sinh khối 12 - THPT Phạm Hồng Thái: cháy mãi đam mê với trái bóng tròn </h5>
-                            <p class="card-text">nam sinh lớp 12 đá bóng vì rất vui :V</p>
+                            <h5 class="card-title">Science Fair Success</h5>
+                            <p class="card-text">Our Science Club recently hosted a successful science fair with over 50 projects displayed.</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
@@ -97,8 +98,8 @@
                     <div class="card">
                         <!-- <img src="images/art-exhibition.jpg" class="card-img-top" alt="Art Exhibition"> -->
                         <div class="card-body">
-                            <h5 class="card-title">PHT’s Japanese culture </h5>
-                            <p class="card-text">Là clb văn hóa Nhật Bản trực thuộc trường thpt PHT được thành lập vào ngày 8/11/2023 bởi các học sinh yêu thích văn hóa Nhật Bản cùng với hoạt hình Nhật Bản</p>
+                            <h5 class="card-title">Art Exhibition</h5>
+                            <p class="card-text">The Art Club's annual exhibition showcased stunning artworks created by our talented students.</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
@@ -107,11 +108,9 @@
                     <div class="card">
                         <!-- <img src="images/music-concert.jpg" class="card-img-top" alt="Music Concert"> -->
                         <div class="card-body">
-                            <h5 class="card-title">Humans of Phạm Hồng Thái</h5>
-                            <p class="card-text">II.Humans of Phạm Hồng Thái
-                                Humans of Phạm Hồng Thái đã được thành lập vào ngày 4/3/2015 bởi hai bạn 97-ers 12D1 và 12A5 của trường lấy cảm hứng từ “Humans of New York” và “Humans of Hà Nội”.
-                                </p>
-                            <a href="#" class="btn btn-primary">Xem thêm</a>
+                            <h5 class="card-title">Music Concert</h5>
+                            <p class="card-text">The Music Club held a concert featuring performances from various student bands and solo artists.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +122,7 @@
     <footer class="bg-light text-center py-4">
         <div class="container">
             <p class="mb-0">&copy; 2023 School Clubs. All rights reserved.</p>
-            <a href="mailto:contact@schoolclubs.com" class="btn btn-primary mt-3">Liên lạc với chúng tôi ở đây</a>
+            <a href="mailto:contact@schoolclubs.com" class="btn btn-primary mt-3">Contact Us Here</a>
         </div>
     </footer>
 

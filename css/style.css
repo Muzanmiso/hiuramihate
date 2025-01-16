@@ -1,7 +1,17 @@
 body {
-    padding-top: 0; /* Initially no padding */
+    margin: 0;
+    padding: 0;
 }
 
 .fixed-top {
     transition: padding-top 0.3s ease-in-out;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.banner {
+    margin-top: 0;
+    padding-top: 0;
 }

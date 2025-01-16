@@ -15,6 +15,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     window.addEventListener('resize', adjustPadding);
 });
+window.addEventListener('scroll', function() {
+    var banner = document.getElementById('banner');
+    var navbar = document.getElementById('navbar');
+    var bannerHeight = banner.offsetHeight;
+    if (window.scrollY >= bannerHeight) {
+        navbar.classList.add('fixed-top');
+    } else {
+        navbar.classList.remove('fixed-top');
+    }
+});
 
 function nextQuestion(currentQuestion) {
     const currentElement = document.getElementById(`question${currentQuestion}`);
