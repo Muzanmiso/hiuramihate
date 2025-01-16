@@ -1,124 +1,131 @@
-<!-- <!DOCTYPE html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muzanmiso</title> -->
-    <!-- Link Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>School Clubs</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container mt-5"> -->
-        <!-- Tiêu đề chính -->
-        <!-- <h1 class="text-center text-primary">mmm</h1> -->
-
-        <!-- Nút bấm -->
-        <!-- <div class="text-center my-4">
-            <button class="btn btn-warning">Test nút bấm</button>
-        </div> -->
-
-        <!-- Phần mô tả -->
-        <!-- <h2 class="text-success">Hiura</h2>
-        <h3 class="text-muted">Mihate</h3> -->
-
-        <!-- Ảnh -->
-        <!-- <div class="text-center my-4">
-            <img src="https://i.pinimg.com/236x/25/2c/e9/252ce9bb5d82ce152aa68da9ef59ba9d.jpg" alt="ảnh femboi" class="img-fluid rounded">
-        </div> -->
-
-        <!-- Liên kết -->
-        <!-- <div class="text-center my-3">
-            <a href="https://www.pinterest.com/myhuongbacly/hiura-mihate/" class="btn btn-outline-primary" target="_blank">
-                Vào xem ảnh gái riel
-            </a>
-        </div> -->
-
-        <!-- Danh sách -->
-        <!-- <ul class="list-group my-4">
-            <li class="list-group-item">Tôi</li>
-            <li class="list-group-item">Không</li>
-            <li class="list-group-item">Gay</li>
-            <li class="list-group-item">Tí</li>
-            <li class="list-group-item">Nào</li>
-        </ul> -->
-
-        <!-- Bảng -->
-        <!-- <div class="table-responsive">
-            <table class="table table-bordered text-center">
-                <thead class="table-dark">
-                    <tr>
-                        <th>XINH</th>
-                        <th>CUTE</th>
-                        <th>FEMBOI</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>10</td>
-                        <td>10</td>
-                        <td>10</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Banner -->
+    <section class="banner bg-light text-center py-5 mt-5" >
+        <div class="container">
+            <h1 class="display-4">Welcome to Our School Clubs</h1>
+            <p class="lead">Explore a variety of clubs and find the one that suits your interests!</p>
+            <img src="images/school-clubs.jpg" class="img-fluid rounded" alt="School Clubs">
         </div>
-    </div> -->
+    </section>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+        <div class="container">
+            <a class="navbar-brand" href="#">câu lạc bộ trường THPT Phạm Hồng Thái</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Trang Chủ <span class="sr-only">(hiện tại)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioi-thieu.html">giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hoat-dong-noi-bat.html">hoạt động nổi bật</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tham-gia-clb.html">tham gia clb</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Bootstrap JS Bundle -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Survey Section -->
+    <section class="survey py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Which Club Suits You?</h2>
+            <p class="lead">Take our survey to find out which club is the best fit for you!</p>
+            <form id="surveyForm" action="submit-survey.php" method="post" class="text-left">
+                <div class="form-group question" id="question1">
+                    <label for="name">Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="nextQuestion(1)">Next</button>
+                </div>
+                <div class="form-group question d-none" id="question2">
+                    <label for="email">Your Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="nextQuestion(2)">Next</button>
+                </div>
+                <div class="form-group question d-none" id="question3">
+                    <label for="club">Preferred Club:</label>
+                    <select class="form-control" id="club" name="club" required>
+                        <option value="science">Science Club</option>
+                        <option value="art">Art Club</option>
+                        <option value="music">Music Club</option>
+                        <option value="sports">Sports Club</option>
+                    </select>
+                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="showResult()">Submit</button>
+                </div>
+            </form>
+            <div class="result d-none" id="result">
+                <h3 class="mt-4">Survey Result</h3>
+                <p id="resultText"></p>
+                <a id="clubLink" href="#" class="btn btn-light btn-lg mt-3">Go to Club Page</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent News Section -->
+    <section class="recent-news py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Recent News</h2>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <img src="images/giai-bong-da-mini.jpg" class="card-img-top" alt="giải bóng đá mini nam">
+                        <div class="card-body">
+                            <h5 class="card-title">giải bóng đá mini nam học sinh khối 12 - THPT Phạm Hồng Thái: cháy mãi đam mê với trái bóng tròn </h5>
+                            <p class="card-text">nam sinh lớp 12 đá bóng vì rất vui :V</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <!-- <img src="images/art-exhibition.jpg" class="card-img-top" alt="Art Exhibition"> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Art Exhibition</h5>
+                            <p class="card-text">The Art Club's annual exhibition showcased stunning artworks created by our talented students.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <!-- <img src="images/music-concert.jpg" class="card-img-top" alt="Music Concert"> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Music Concert</h5>
+                            <p class="card-text">The Music Club held a concert featuring performances from various student bands and solo artists.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 School Clubs. All rights reserved.</p>
+            <a href="mailto:contact@schoolclubs.com" class="btn btn-primary mt-3">Contact Us Here</a>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-</html> -->
-
-<!-- code của t -->
-
-<!DOCTYPE html>
-<html>
-    <!-- heading -->
-    <head>
-        <title> baonguyen </title>
-        <meta charset="utf-8">
-    </head>
-<!-- body-->
-    <body>
-        <!-- thực hành 9 thẻ:
-        1. <hx>
-        2. <p>
-        3. <img>    (lấy ảnh từ nguồn dẫn)
-        4. table    (tạo bảng)
-        5. <a>      (hiện đường link)
-            
-          -->
-        <h1>đây là trang web của toi</h1>
-        <h4>tìm kiếm loài mèo: <input type="text"></h4>
-        <p>ở đây có:</p>
-        <img src="https://www.bing.com/th?id=OIP.xqYunaXLEIiIBgbHGncjBQHaHa&w=205&h=206&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" alt="mèo">
-        <h5> chúng tôi có:</h5>
-        <ul>
-            <li>mèo bình thường</li>
-            <li>mèo AI</li>
-            <li>mèo Tom</li>
-        </ul>
-        <h5>các loại mèo:</h5>
-        <table>
-            <thead>
-                <th>tên mèo</th>
-                <th>xuất xứ</th>
-                <th>độ đáng yêu</th>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>mèo anh lông ngắn</td>
-                    <td>anh</td>
-                    <td>đáng yêu</td>
-                </tr>
-                <tr>
-                    <td>mèo ta</td>
-                    <td>việt nam</td>
-                    <td>thịt rất ngon</td>
-                </tr>
-            </tbody>
-        </table>
-        <h5> ngoài ra bạn có thể tìm thêm mèo ở đây:</h5> 
-        <a href="https://www.bing.com/ck/a?!&&p=68156203acb7be971cf21b932a29106631e132c2af79c8af0309bec1b56c96eaJmltdHM9MTczNjI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=205613fb-1fed-6b16-248b-009e1e5a6a35&psq=h%c3%acnh+%e1%ba%a3nh+m%c3%a8o&u=a1aHR0cHM6Ly9waXhhYmF5LmNvbS92aS9pbWFnZXMvc2VhcmNoL20lQzMlQThvLw&ntb=1">mèo</a>
-    </body>
 </html>
