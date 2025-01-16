@@ -35,3 +35,9 @@ body {
 .banner-images img:nth-child(even) {
     align-self: flex-end;
 }
+.images
+{
+    width: 100%; /* Adjust this value to make the images smaller */
+    margin: 4px;
+    display: inline-block; /* Ensure images are inline */
+}
