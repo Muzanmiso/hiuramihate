@@ -11,8 +11,8 @@
     <!-- Banner -->
     <section class="banner bg-light text-center py-5 mt-5" >
         <div class="container">
-            <h1 class="display-4">Welcome to Our School Clubs</h1>
-            <p class="lead">Explore a variety of clubs and find the one that suits your interests!</p>
+            <h1 class="display-4">Chào mừng đến với Câu lạc bộ trường học của chúng tôi</h1>
+            <p class="lead">Khám phá nhiều câu lạc bộ khác nhau và tìm câu lạc bộ phù hợp với sở thích của bạn!</p>
             <img src="images/school-clubs.jpg" class="img-fluid rounded" alt="School Clubs">
         </div>
     </section>
@@ -46,34 +46,34 @@
     <!-- Survey Section -->
     <section class="survey py-5 bg-primary text-white text-center">
         <div class="container">
-            <h2 class="mb-4">Which Club Suits You?</h2>
-            <p class="lead">Take our survey to find out which club is the best fit for you!</p>
+            <h2 class="mb-4">Câu lạc bộ nào phù hợp với bạn?</h2>
+            <p class="lead">Hãy tham gia khảo sát của chúng tôi để tìm ra câu lạc bộ phù hợp nhất với bạn!</p>
             <form id="surveyForm" action="submit-survey.php" method="post" class="text-left">
                 <div class="form-group question" id="question1">
-                    <label for="name">Your Name:</label>
+                    <label for="name">Tên của bạn:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
-                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="nextQuestion(1)">Next</button>
+                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="nextQuestion(1)">Tiếp tục</button>
                 </div>
                 <div class="form-group question d-none" id="question2">
-                    <label for="email">Your Email:</label>
+                    <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" required>
-                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="nextQuestion(2)">Next</button>
+                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="nextQuestion(2)">Tiếp tục</button>
                 </div>
                 <div class="form-group question d-none" id="question3">
-                    <label for="club">Preferred Club:</label>
+                    <label for="club">Câu lạc bộ ưa thích:</label>
                     <select class="form-control" id="club" name="club" required>
-                        <option value="science">Science Club</option>
-                        <option value="art">Art Club</option>
-                        <option value="music">Music Club</option>
-                        <option value="sports">Sports Club</option>
+                        <option value="science">clb1</option>
+                        <option value="art">clb2</option>
+                        <option value="music">clb3</option>
+                        <option value="sports">cl4</option>
                     </select>
-                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="showResult()">Submit</button>
+                    <button type="button" class="btn btn-light btn-lg mt-3" onclick="showResult()">Xác nhận </button>
                 </div>
             </form>
             <div class="result d-none" id="result">
-                <h3 class="mt-4">Survey Result</h3>
+                <h3 class="mt-4">Kết quả khảo sát cho thấy :</h3>
                 <p id="resultText"></p>
-                <a id="clubLink" href="#" class="btn btn-light btn-lg mt-3">Go to Club Page</a>
+                <a id="clubLink" href="#" class="btn btn-light btn-lg mt-3">Tới trang câu lạc bộ</a>
             </div>
         </div>
     </section>
@@ -81,7 +81,7 @@
     <!-- Recent News Section -->
     <section class="recent-news py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Recent News</h2>
+            <h2 class="text-center mb-4">Tin tức gần đây</h2>
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="card">
@@ -97,8 +97,8 @@
                     <div class="card">
                         <!-- <img src="images/art-exhibition.jpg" class="card-img-top" alt="Art Exhibition"> -->
                         <div class="card-body">
-                            <h5 class="card-title">Art Exhibition</h5>
-                            <p class="card-text">The Art Club's annual exhibition showcased stunning artworks created by our talented students.</p>
+                            <h5 class="card-title">PHT’s Japanese culture </h5>
+                            <p class="card-text">Là clb văn hóa Nhật Bản trực thuộc trường thpt PHT được thành lập vào ngày 8/11/2023 bởi các học sinh yêu thích văn hóa Nhật Bản cùng với hoạt hình Nhật Bản</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
@@ -107,9 +107,11 @@
                     <div class="card">
                         <!-- <img src="images/music-concert.jpg" class="card-img-top" alt="Music Concert"> -->
                         <div class="card-body">
-                            <h5 class="card-title">Music Concert</h5>
-                            <p class="card-text">The Music Club held a concert featuring performances from various student bands and solo artists.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <h5 class="card-title">Humans of Phạm Hồng Thái</h5>
+                            <p class="card-text">II.Humans of Phạm Hồng Thái
+                                Humans of Phạm Hồng Thái đã được thành lập vào ngày 4/3/2015 bởi hai bạn 97-ers 12D1 và 12A5 của trường lấy cảm hứng từ “Humans of New York” và “Humans of Hà Nội”.
+                                </p>
+                            <a href="#" class="btn btn-primary">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +123,7 @@
     <footer class="bg-light text-center py-4">
         <div class="container">
             <p class="mb-0">&copy; 2023 School Clubs. All rights reserved.</p>
-            <a href="mailto:contact@schoolclubs.com" class="btn btn-primary mt-3">Contact Us Here</a>
+            <a href="mailto:contact@schoolclubs.com" class="btn btn-primary mt-3">Liên lạc với chúng tôi ở đây</a>
         </div>
     </footer>
 
